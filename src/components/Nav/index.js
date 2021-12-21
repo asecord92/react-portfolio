@@ -2,12 +2,13 @@ import React from 'react';
 import { AppBar, Button, Toolbar, Link, CssBaseline} from '@mui/material';
 
 
-function Nav() {
+function Nav(props) {
+    const {currentPage, setCurrentPage} = props;
     return (
         <header>
             <CssBaseline/>
             <Toolbar sx= {{flexWrap: 'wrap', display: 'flex',}}>
-                <AppBar style={{height:'10%'}}>
+                <AppBar style={{height:'10%', cursor:'pointer'}}>
                     <nav>
                         <Link
                             variant= 'button'
@@ -23,16 +24,17 @@ function Nav() {
                             variant= 'button'
                             underline='none'
                             color='text.primary'
-                            href='#'
+                            onClick={()=> setCurrentPage('About Me')}
                             sx={{ my: 1, mx: 1.5 }}
                         >
                             About Me
                         </Link>
+                        
                         <Link
                             variant= 'button'
                             underline='none'
                             color='text.primary'
-                            href='#'
+                            onClick={()=> setCurrentPage('Contact Me')}
                             sx={{ my: 1, mx: 1.5 }}
                         >
                             Contact

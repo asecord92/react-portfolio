@@ -1,13 +1,21 @@
+import Nav from './components/Nav/index';
+import About from './components/About/index';
+import Contact from './components/Contact/index';
+import Portfolio from './components/Portfolio/index'
+import { Container } from '@mui/material';
+import { useState } from 'react';
 
-import Nav from './components/Nav'
-import About from './components/About'
 
 function App() {
+
+  const [currentPage, setCurrentPage] = useState('About Me')
   return (
     <>
-    <Nav/>
+    <Nav currentPage={currentPage} setCurrentPage={setCurrentPage}/>
     <main>
-    <About/>
+      {currentPage ==='About Me' && <About/> }
+      {currentPage === 'Contact Me' && <Contact/>}
+      <Portfolio/>
     </main>
     </>
   );
