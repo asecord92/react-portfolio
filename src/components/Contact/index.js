@@ -10,35 +10,17 @@ import Container from '@mui/material/Container';
 
 
 function Contact(){
-    const [errorMessage, setErrorMessage] = useState('');
-    const [formState, setFormState] = useState({ firstName: '', last_name: '',email: '', message: '' });
-    const {firstName, last_name, email, message } = formState;
+    const [formState, setFormState] = useState({firstName: '', lastName: '', email: '', message: ''})
+    const {firstName, lastName, email, message} = formState;
 
     function handleChange(e) {
-
-        // if(e.target.name === 'email'){
-        //     const isValid = validateEmail(e.target.value);
-        //     if(!isValid) {
-        //         setErrorMessage('Your email is invalid');
-        //     } else {
-        //         setErrorMessage('');
-        //     }
-        // }else {
-        //     if(!e.target.value.length){
-        //         setErrorMessage(`${e.target.name} is required`);
-        //     }else{
-        //         setErrorMessage('');
-        //     }
-        // }
-        if (!errorMessage) {
-            setFormState({ ...formState, [e.target.firstName]: e.target.value });
-          }
+      setFormState({...formState, [e.target.name]: e.target.value })
+    }
     
-        };
     function handleSubmit(e) {
-        e.preventDefault();
-        console.log(formState);
-      }
+      e.preventDefault();
+      console.log(formState);
+    }
 
     return (
     <section>
@@ -55,7 +37,9 @@ function Contact(){
           <Typography component="h1" variant="h5">
             Contact Me
           </Typography>
-          <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 3 }}>
+          <Box component="form" 
+          onSubmit={handleSubmit} 
+          noValidate sx={{ mt: 3 }}>
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>
                 <TextField
@@ -65,7 +49,9 @@ function Contact(){
                   fullWidth
                   id="firstName"
                   label="First Name"
+                  defaultValue={firstName}
                   autoFocus
+                  onChange={handleChange}
                   onBlur={handleChange}
                 />
               </Grid>
@@ -77,6 +63,8 @@ function Contact(){
                   label="Last Name"
                   name="lastName"
                   autoComplete="family-name"
+                  defaultValue={lastName}
+                  onChange={handleChange}
                   onBlur={handleChange}
                 />
               </Grid>
@@ -88,16 +76,21 @@ function Contact(){
                   label="Email Address"
                   name="email"
                   autoComplete="email"
+                  defaultValue={email}
+                  onChange={handleChange}
                   onBlur={handleChange}
                 />
               </Grid>
               <Grid item xs={12}>
               <TextField
                 id="outlined-multiline-static"
+                name= 'message'
                 fullWidth
                 multiline
                 rows={4}
+                defaultValue={message}
                 label='Your Message Here'
+                onChange={handleChange}
                 onBlur={handleChange}
                 />
               </Grid>

@@ -1,6 +1,6 @@
 import React from 'react';
-import { Container, Grid, Card, CardMedia, CardContent, Typography, Link } from '@mui/material';
-import { Height } from '@mui/icons-material';
+import { Container, Grid, Card, CardMedia, CardContent, Typography, Button, CardActions } from '@mui/material';
+
 
 
 function Portfolio() {
@@ -8,7 +8,7 @@ function Portfolio() {
         {
             title: 'Brew Finder',
             technology:'JavaScript',
-            image:'',
+            image:'brew.png',
             description:'Brew Finder is an application that allows you to search for a brewery by city. A short description and a location finder provides you with additional information about the brewery.',
             repo: 'https://github.com/asecord92/brew-finder',
             app:'https://asecord92.github.io/brew-finder/'
@@ -16,7 +16,7 @@ function Portfolio() {
         {
             title:'Note Taker',
             technology:'Javascript, Node, Express',
-            image:'note-taker.jpg',
+            image:'note-taker.png',
             description:'This application allows users to enter notes and store them in a database. We are able to leverage routes for both HTML pages as well as for notes found in the application. Notes are pulled when the page is loaded, and stored on the left hand side. When you enter a new note, you are given the option to save. Clicking saved notes displays them in the center of the page, however does not allow you to write over them. Future functionality includes the ability to delete.',
             repo:'https://github.com/asecord92/note-taker-app',
             app:'https://asecord-note-taker1.herokuapp.com/'
@@ -56,26 +56,31 @@ function Portfolio() {
     ]
 
     return (
-        <Container maxWidth='md'>
+        <Container style={{padding:'20px 0'}}maxWidth='lg'>
             <Grid container spacing={4}>
                 {portfolioProjects.map((project, index)=>(
-                    <Grid item key={index}>
-                        <Card>
+                    <Grid item key={index} xs={12} sm={6} md={4}>
+                        <Card style={{height:'100%', display:'flex', flexDirection:'column'}}>
                             <CardMedia
-                                style= {{height:'20%'}}
-                                image={project.image}
-                                title={project.title}
-                                src='../../public'
+                                component= 'img'
+                                title={project.title.default}
+                                src={project.image}
                             />
-                            <CardContent>
+                            <CardContent style={{flexGrow:'1'}}>
                                 <Typography gutterBottom variant='h5'>
                                     {project.title}
                                 </Typography>
-                                <Typography>
+                                <Typography variant='subtitle2' gutterBottom>
+                                    {project.technology}
+                                </Typography>
+                                <Typography variant='body2'>
                                     {project.description}
                                 </Typography> 
                             </CardContent>
-
+                            <CardActions>
+                                <Button size='small' onClick={()=>window.open(project.repo, '_blank')}>View Repo</Button>
+                                <Button size='small' onClick={()=>window.open(project.app, '_blank')}>View Application</Button>
+                            </CardActions>
                         </Card>
                     </Grid>
                 ))}

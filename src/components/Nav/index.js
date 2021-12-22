@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { AppBar, Button, Toolbar, Link, CssBaseline} from '@mui/material';
 
 
 function Nav(props) {
     const {currentPage, setCurrentPage} = props;
+    useEffect(()=> {
+        document.title = `${currentPage}`
+    }, [currentPage])
     return (
         <header>
             <CssBaseline/>
@@ -43,7 +46,7 @@ function Nav(props) {
                             variant= 'button'
                             underline='none'
                             color='text.primary'
-                            href='#'
+                            onClick={()=> setCurrentPage('Portfolio')}
                             sx={{ my: 1, mx: 1.5 }}
                         >
                             Portfolio
