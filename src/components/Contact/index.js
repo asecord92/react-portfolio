@@ -7,14 +7,32 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
+import {validateEmail} from '../../utils/helpers'
 
 
 function Contact(){
     const [formState, setFormState] = useState({firstName: '', lastName: '', email: '', message: ''})
     const {firstName, lastName, email, message} = formState;
+    const [errorMessage, setErrorMessage]= useState('')
 
     function handleChange(e) {
-      setFormState({...formState, [e.target.name]: e.target.value })
+      if(e.target.name === 'email') {
+        const isValid = validateEmail(e.target.value);
+        if(!isValid){
+          setErrorMessage('Your email is invalid.')
+        } else {
+          setErrorMessage('');
+        }
+      }else {
+        if(!e.target.value.length) {
+          setErrorMessage(`This field is required!`)
+        }else {
+          setErrorMessage('');
+        }
+      }
+      if(!errorMessage){
+        setFormState({...formState, [e.target.name]:e.target.value})
+      }
     }
     
     function handleSubmit(e) {
@@ -51,8 +69,8 @@ function Contact(){
                   label="First Name"
                   defaultValue={firstName}
                   autoFocus
-                  onChange={handleChange}
                   onBlur={handleChange}
+
                 />
               </Grid>
               <Grid item xs={12} sm={6}>
@@ -64,8 +82,8 @@ function Contact(){
                   name="lastName"
                   autoComplete="family-name"
                   defaultValue={lastName}
-                  onChange={handleChange}
                   onBlur={handleChange}
+
                 />
               </Grid>
               <Grid item xs={12}>
@@ -77,8 +95,8 @@ function Contact(){
                   name="email"
                   autoComplete="email"
                   defaultValue={email}
-                  onChange={handleChange}
                   onBlur={handleChange}
+
                 />
               </Grid>
               <Grid item xs={12}>
@@ -90,8 +108,8 @@ function Contact(){
                 rows={4}
                 defaultValue={message}
                 label='Your Message Here'
-                onChange={handleChange}
                 onBlur={handleChange}
+                helperText={errorMessage}
                 />
               </Grid>
               <Grid item xs={12}>
