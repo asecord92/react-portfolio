@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Grid, Card, CardMedia, CardContent, Typography, Button, CardActions } from '@mui/material';
+import { CssBaseline, Container, Grid, Card, CardMedia, CardContent, Typography, Button, CardActions } from '@mui/material';
 
 
 
@@ -56,8 +56,10 @@ function Portfolio() {
     ]
 
     return (
+        <>
+        
         <Container style={{padding:'20px 0'}}maxWidth='lg'>
-            <Grid container spacing={4}>
+            <Grid container spacing={4} style={{paddingBottom:'20px', paddingLeft:'15px', paddingRight:'15px'}}>
                 {portfolioProjects.map((project, index)=>(
                     <Grid item key={index} xs={12} sm={6} md={4}>
                         <Card style={{height:'100%', display:'flex', flexDirection:'column'}}>
@@ -86,6 +88,7 @@ function Portfolio() {
                 ))}
             </Grid>
         </Container>
+        </>
     )
 }
 

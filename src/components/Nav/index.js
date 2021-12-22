@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { AppBar, Button, Toolbar, Link, CssBaseline} from '@mui/material';
+import { AppBar, Toolbar, Link, CssBaseline, Typography} from '@mui/material';
 
 
 function Nav(props) {
@@ -10,19 +10,10 @@ function Nav(props) {
     return (
         <header>
             <CssBaseline/>
-            <Toolbar sx= {{flexWrap: 'wrap', display: 'flex',}}>
-                <AppBar style={{height:'10%', cursor:'pointer'}}>
-                    <nav>
-                        <Link
-                            variant= 'button'
-                            underline='none'
-                            color='text.primary'
-                            href='/'
-                            sx={{ my: 1, mx: 1.5 }}
-                        >
-                            Adam Secord
-                        </Link>
-                        
+                <AppBar position= 'static' elevation={0} style={{cursor:'pointer'}}>
+                    <Toolbar sx= {{flexWrap: 'wrap', justifyContent:'space-between'}}>
+                    <Typography variant='h2'onClick={()=> setCurrentPage('About Me')}>Adam Secord</Typography>
+                    <nav style={{display:'block', flexWrap:'nowrap'}}>
                         <Link
                             variant= 'button'
                             underline='none'
@@ -55,14 +46,15 @@ function Nav(props) {
                             variant= 'button'
                             underline='none'
                             color='text.primary'
-                            href='#'
+                            onClick={()=> window.open('https://asecord92.github.io/react-portfolio/resume.pdf','_blank')}
                             sx={{ my: 1, mx: 1.5 }}
                         >
                             Resume
                         </Link>
                     </nav>
-                </AppBar>
-            </Toolbar>
+                 </Toolbar>
+            </AppBar>
+           
         </header>
     )
 }

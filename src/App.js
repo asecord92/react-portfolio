@@ -14,16 +14,15 @@ function App() {
   const [currentPage, setCurrentPage] = useState('About Me')
   return (
     <>
+    <div style={{minHeight: '100%'}}>
     <Nav currentPage={currentPage} setCurrentPage={setCurrentPage}/>
-    <main>
+    <main style={{paddingBottom:'20px'}}>
       {currentPage ==='About Me' && <About/> }
       {currentPage === 'Contact Me' && <Contact/>}
       {currentPage === 'Portfolio' && <Portfolio/>}
     </main>
-    <footer style={{position:'fixed', left:'0', bottom:'0', width:'100%'}}>
-      <Typography variant='subtitle1' align='center' gutterBottom>
-        @asecord
-        </Typography>
+    
+    <footer style={{position:'fixed', height:'40px',bottom:'0', width:'100%'}}>
         <Typography align='center' gutterBottom>
         <LinkedInIcon style={{paddingRight: '5px'}} fontSize='large' onClick={()=> window.open('https://www.linkedin.com/in/adam-secord-2b56726b/', '_blank')} />
         <GitHubIcon style={{paddingRight: '5px'}}  fontSize='large' onClick={()=> window.open('https://github.com/asecord92', '_blank')} />
@@ -31,6 +30,7 @@ function App() {
 
       </Typography>
     </footer>
+    </div>
     </>
   );
 }
