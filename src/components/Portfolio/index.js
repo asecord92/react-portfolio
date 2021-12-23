@@ -6,6 +6,22 @@ import { CssBaseline, Container, Grid, Card, CardMedia, CardContent, Typography,
 function Portfolio() {
     const portfolioProjects = [
         {
+            title: 'ConnectUs',
+            technology: 'JavaScript, Handlebars, Sequilize',
+            image: 'connectus.png',
+            description: 'This app is a way to connect you people, make friends, find support, and explore your interests. Thousands of events are happening every day, both online and in person!',
+            repo: 'https://github.com/asecord92/connectus',
+            app:'https://asecord-connectus.herokuapp.com/'
+        },
+        {
+            title:'Budget Tracker',
+            technology: 'JavaScript, Mongoose',
+            image:'budget.png',
+            description:'This is a Progressive Web Application that allows for the user to keep a track of their budget.',
+            repo: 'https://github.com/asecord92/budget-time',
+            app:'https://fathomless-sea-25261.herokuapp.com/'
+        },
+        {
             title: 'Brew Finder',
             technology:'JavaScript',
             image:'brew.png',
@@ -28,22 +44,6 @@ function Portfolio() {
             description:'The purpose of this application is to dynamically create a task list for a given work day. Using Moment.Js, the task list automatically updates color based one what time of day it is realtive to the time that is seen on the page. It will be grey for past times, red for present and green for future. This application also allows users to save their tasks locally, to access whenver the page is refreshed.',
             repo: 'https://github.com/asecord92/daily-work-schedule',
             app: 'https://asecord92.github.io/daily-work-schedule/'
-        },
-        {
-            title: 'ConnectUs',
-            technology: 'JavaScript, Handlebars, Sequilize',
-            image: 'connectus.png',
-            description: 'This app is a way to connect you people, make friends, find support, and explore your interests. Thousands of events are happening every day, both online and in person!',
-            repo: 'https://github.com/asecord92/connectus',
-            app:'https://asecord-connectus.herokuapp.com/'
-        },
-        {
-            title:'Budget Tracker',
-            technology: 'JavaScript, Mongoose',
-            image:'budget.png',
-            description:'This is a Progressive Web Application that allows for the user to keep a track of their budget.',
-            repo: 'https://github.com/asecord92/budget-time',
-            app:'https://fathomless-sea-25261.herokuapp.com/'
         },
         {
             title: 'Timed Quiz',

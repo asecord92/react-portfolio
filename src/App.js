@@ -4,9 +4,7 @@ import Contact from './components/Contact/index';
 import Portfolio from './components/Portfolio/index'
 import { useState } from 'react';
 import { Typography, Container, Box,} from '@mui/material';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import TwitterIcon from '@mui/icons-material/Twitter';
+import Footer from './components/Footer/index'
 import './App.css'
 
 
@@ -20,7 +18,7 @@ function App() {
       sx={{
         display: 'flex',
         flexDirection: 'column',
-        minHeight: '100vh',
+        minHeight: '50vh',
         
       }}
     >
@@ -33,26 +31,7 @@ function App() {
             {currentPage === 'Portfolio' && <Portfolio/>}
         </Typography>
       </Container>
-          <Box
-              component="footer"
-              sx={{
-                py: 3,
-                px: 2,
-                mt: 'auto',
-                backgroundColor:'#463F3A'
-              }}
-      >
-        <Container maxWidth="sm">
-          <Typography variant="body1">
-          <Typography align='center' gutterBottom>
-            <LinkedInIcon style={{color:"#BCB8B1", paddingRight: '5px'}} fontSize='large' onClick={()=> window.open('https://www.linkedin.com/in/adam-secord-2b56726b/', '_blank')} />
-            <GitHubIcon style={{color:"#BCB8B1", paddingRight: '5px'}}  fontSize='large' onClick={()=> window.open('https://github.com/asecord92', '_blank')} />
-            <TwitterIcon  style={{color:"#BCB8B1", paddingRight: '5px'}} fontSize='large' onClick={()=> window.open('https://twitter.com/SecordOut', '_blank')}/>
-
-            </Typography>
-          </Typography>
-        </Container>
-      </Box>
+          <Footer/>
       </Box>
     
     </>
