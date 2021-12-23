@@ -34,7 +34,7 @@ function Nav(props) {
                 sx={{ mr: 2, display: { xs: 'none', md: 'flex', cursor:'pointer' } }}
                 onClick={()=> setCurrentPage('About Me')}
               >
-                Adam Secord's
+                Adam Secord
               </Typography>
     
               <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
