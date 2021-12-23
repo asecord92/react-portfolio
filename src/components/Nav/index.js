@@ -19,6 +19,10 @@ function Nav(props) {
         setAnchorElNav(null);
       };
 
+      const handleResumeOpen =() => {
+        window.open('https://asecord92.github.io/react-portfolio//resume.pdf','_blank');
+      };
+
       return (
         <AppBar style={{backgroundColor: '#463F3A'}}position="static">
           <Container maxWidth="xl">
@@ -30,7 +34,7 @@ function Nav(props) {
                 sx={{ mr: 2, display: { xs: 'none', md: 'flex', cursor:'pointer' } }}
                 onClick={()=> setCurrentPage('About Me')}
               >
-                Adam Secord
+                Adam Secord's
               </Typography>
     
               <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -72,7 +76,7 @@ function Nav(props) {
                       <Typography onClick={()=> setCurrentPage('Portfolio')} textAlign="center">Portfolio</Typography>
                     </MenuItem>
                     <MenuItem onClick={handleCloseNavMenu}>
-                      <Typography onClick={()=> window.open('https://asecord92.github.io/react-portfolio/resume.pdf','_blank')} textAlign="center">Resume</Typography>
+                      <Typography onClick={handleResumeOpen} textAlign="center">Resume</Typography>
                     </MenuItem>
                 </Menu>
               </Box>
@@ -104,7 +108,7 @@ function Nav(props) {
                     Portfolio
                   </Button>
                   <Button
-                    onClick={handleCloseNavMenu, ()=> window.open('https://asecord92.github.io/react-portfolio/resume.pdf','_blank')}
+                    onClick={handleCloseNavMenu, handleResumeOpen}
                     sx={{ my: 2, color: 'white', display: 'block' }}
                   >
                     Resume
