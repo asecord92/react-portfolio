@@ -8,6 +8,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import {validateEmail} from '../../utils/helpers'
+import NoteAddIcon from '@mui/icons-material/NoteAdd';
 
 
 function Contact(){
@@ -42,7 +43,7 @@ function Contact(){
 
     return (
     <section>
-      <Container component="main" maxWidth="xs">
+      <Container component="main" maxWidth="xs" style={{backgroundColor:'white', borderRadius:'8px'}}>
         <CssBaseline />
         <Box
           sx={{
@@ -53,9 +54,10 @@ function Contact(){
           }}
         >
           <Typography component="h1" variant="h5">
-            Contact Me
+            <span><NoteAddIcon fontSize='lg'></NoteAddIcon> </span>Contact Me
           </Typography>
           <Box component="form" 
+          
           onSubmit={handleSubmit} 
           noValidate sx={{ mt: 3 }}>
             <Grid container spacing={2}>
@@ -118,6 +120,7 @@ function Contact(){
             <Button
               type="submit"
               fullWidth
+              style={{backgroundColor:'#463F3A'}}
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
             >
