@@ -1,6 +1,6 @@
 import React from 'react';
 import { CssBaseline, Container, Grid, Card, CardMedia, CardContent, Typography, Button, CardActions } from '@mui/material';
-
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 
 function Portfolio() {
@@ -80,7 +80,7 @@ function Portfolio() {
                                 </Typography> 
                             </CardContent>
                             <CardActions>
-                                <Button size='small' onClick={()=>window.open(project.repo, '_blank')}>View Repo</Button>
+                                <Button size='small' onClick={()=>window.open(project.repo, '_blank')}><GitHubIcon/> </Button>
                                 <Button size='small' onClick={()=>window.open(project.app, '_blank')}>View Application</Button>
                             </CardActions>
                         </Card>
