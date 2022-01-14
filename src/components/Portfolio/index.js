@@ -24,7 +24,7 @@ function Portfolio() {
       app: "https://asecord-connectus.herokuapp.com/",
     },
     {
-      title: "Budget Tracker",
+      title: "Pet Panel",
       technology: "Mongoose, Express, React, Node, GraphQL",
       image: "pet.png",
       description:
