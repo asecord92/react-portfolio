@@ -1,6 +1,6 @@
 {
   "name": "react-portfolio",
-  "homepage":"http://asecord92.github.io/react-portfolio",
+  "homepage": "http://asecord92.github.io/react-portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
