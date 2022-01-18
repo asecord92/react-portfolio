@@ -24,13 +24,13 @@ function Portfolio() {
       app: "https://asecord-connectus.herokuapp.com/",
     },
     {
-      title: "Pet Panel",
+      title: "Library Search",
       technology: "Mongoose, Express, React, Node, GraphQL",
-      image: "pet.png",
+      image: "books.png",
       description:
-        "Pet Panel is an forum discussion webpage. Users are able to submit their own posts to categories, and comment on the posts of other users. In the future, users will be able to use the Pet Finder API to search for animal shelters in their area",
-      repo: "https://project-pet-panel.herokuapp.com/",
-      app: "https://project-pet-panel.herokuapp.com/",
+        "This application uses Google Book Search API in order to let users find their favorite books and add them to a save list. All queries are made using GraphQL in order to return user and saved book data. JSON web token is used as an authentication method as well.",
+      repo: "https://github.com/asecord92/library-search",
+      app: "https://glacial-woodland-09386.herokuapp.com/",
     },
     {
       title: "Brew Finder",
