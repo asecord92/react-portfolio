@@ -46,7 +46,7 @@ function About() {
           <Typography
             variant="body1"
             align="center"
-            sx={{ fontSize: { lg: 16, md: 14, sm: 10, xs: 8 } }}
+            sx={{ fontSize: { lg: 16, md: 14, sm: 10 } }}
             paragraph
           >
             Hello! My name is Adam and I am a full-stack developer. I have just
