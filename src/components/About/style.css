@@ -1,0 +1,60 @@
+.skills{
+    transition: all 1s ease-in-out;
+    
+}
+
+.html,
+.css,
+.boot,
+.js,
+.graph,
+.react,
+.apollo,
+.mysql,
+.mongo,
+.git {
+    transition: all .3s ease-in-out;
+    opacity: 100%;
+}
+
+.html:hover{
+    
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.5);
+}
+.css:hover{
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.5);
+}
+.boot:hover{
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.5);
+}
+.js:hover{
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.5);
+}
+.graph:hover{
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.5);
+}
+.react:hover{
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.5);
+}
+.apollo:hover{
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.5);
+}
+.mysql:hover{
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.5);
+}
+.mongo:hover{
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.5);
+}
+.git:hover{
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.5);
+}

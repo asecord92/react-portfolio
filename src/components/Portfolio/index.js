@@ -80,6 +80,7 @@ function Portfolio() {
             paddingBottom: "20px",
             paddingLeft: "15px",
             paddingRight: "15px",
+            minHeight: "85vh",
           }}
         >
           {portfolioProjects.map((project, index) => (
@@ -89,6 +90,8 @@ function Portfolio() {
                   height: "100%",
                   display: "flex",
                   flexDirection: "column",
+                  backgroundColor: "#3E5C76",
+                  color: "#F0EBD8",
                 }}
               >
                 <CardMedia
@@ -110,9 +113,10 @@ function Portfolio() {
                     size="small"
                     onClick={() => window.open(project.repo, "_blank")}
                   >
-                    <GitHubIcon />{" "}
+                    <GitHubIcon sx={{ color: "#F0EBD8" }} />{" "}
                   </Button>
                   <Button
+                    sx={{ color: "#F0EBD8" }}
                     size="small"
                     onClick={() => window.open(project.app, "_blank")}
                   >
