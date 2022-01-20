@@ -52,7 +52,7 @@ function About() {
             Hello! My name is Adam and I am a full-stack developer. I have just
             recently graduated from the UC Berkely Extension Full-Stack Web
             Development bootcamp, and am looking for opportunities in that
-            field! When I am not coding I enjoy to cooking, playing golf and
+            field! When I am not coding I enjoy cooking, playing golf and
             cheering on my favorite sports teams!
           </Typography>
         </Container>
