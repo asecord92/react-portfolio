@@ -30,7 +30,7 @@ function Nav(props) {
 
   const handleResumeOpen = () => {
     window.open(
-      "https://asecord92.github.io/react-portfolio//resume.pdf",
+      "https://asecord92.github.io/react-portfolio/assets/resume.pdf",
       "_blank"
     );
   };
